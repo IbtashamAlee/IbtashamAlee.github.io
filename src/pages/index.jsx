@@ -12,7 +12,6 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
@@ -22,8 +21,6 @@ import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
 import { formatDate } from '@/lib/formatDate'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
 
 function MailIcon(props) {
   return (
@@ -139,35 +136,42 @@ function Newsletter() {
 function Resume() {
   let resume = [
     {
-      company: 'Planetaria',
-      title: 'CEO',
+      company: 'Global Software Consulting',
+      title: 'Backend Developer',
       logo: logoPlanetaria,
-      start: '2019',
+      start: 'Jun 2023',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
       },
     },
     {
-      company: 'Airbnb',
-      title: 'Product Designer',
-      logo: logoAirbnb,
-      start: '2014',
-      end: '2019',
-    },
-    {
-      company: 'Facebook',
-      title: 'iOS Software Engineer',
+      company: 'ThirtyNorth.dev',
+      title: 'Full stack Enginner',
       logo: logoFacebook,
-      start: '2011',
-      end: '2014',
+      start: 'Jul 2022',
+      end: 'May 2023',
     },
     {
-      company: 'Starbucks',
-      title: 'Shift Supervisor',
+      company: 'Emerssive Solutions',
+      title: 'Associate Software Engr',
       logo: logoStarbucks,
-      start: '2008',
-      end: '2011',
+      start: 'Aug 2021',
+      end: 'Feb 2022',
+    },
+    {
+      company: 'Objex',
+      title: 'Frontend Engineer',
+      logo: logoStarbucks,
+      start: 'Jan 2021',
+      end: 'Apr 2021',
+    },
+    {
+      company: 'BigITSystems',
+      title: 'VueJS Engineer',
+      logo: logoStarbucks,
+      start: 'Sep 2020',
+      end: 'Nov 2020',
     },
   ]
 
@@ -251,42 +255,42 @@ export default function Home({ articles }) {
     <>
       <Head>
         <title>
-          Spencer Sharp - Software designer, founder, and amateur astronaut
+          Ibtasham Ali - Software Engineer, Tech Enthusias, Fitness Advocate
         </title>
         <meta
           name="description"
-          content="I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms."
+          content="I'm Ibtasham Al, Software Engineer specialized in JavaScript, particularly with a focus on Node.js. With extensive experience in crafting exceptional software solutions, I bring a strong skill set to every project. Beyond my love for technology, I'm also an avid gym-goer, committed to maintaining a strong and healthy physique."
         />
       </Head>
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            Passionate Software Engineer, Tech Enthusiast, and Fitness Advocate.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+          I am Ibtasham Ali, Software Engineer specialized in JavaScript, 
+          particularly with a focus on Node.js. With extensive experience in 
+          crafting exceptional software solutions, I bring a strong skill set to every project. 
+          Beyond my love for technology, I am also an avid gym-goer, committed to maintaining a strong and healthy physique.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://twitter.com"
+              href="https://twitter.com/IbtashamAlee"
               aria-label="Follow on Twitter"
               icon={TwitterIcon}
             />
             <SocialLink
-              href="https://instagram.com"
+              href="https://instagram.com/IbtashamAlee"
               aria-label="Follow on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/IbtashamAlee"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/ibtashamalee/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -297,30 +301,16 @@ export default function Home({ articles }) {
       <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
-            {articles.map((article) => (
+            {/* {articles.map((article) => (
               <Article key={article.slug} article={article} />
-            ))}
+            ))} */}
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Resume />
           </div>
         </div>
       </Container>
     </>
   )
-}
-
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
 }
