@@ -62,13 +62,13 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-            Hello there! I'm Ibtasham Ali, a skilled software developer specializing in Node.js, React, MongoDB, NestJS, and a touch of Vue, along with proficiency in SQL. My expertise lies in crafting intuitive and scalable web applications tailored to diverse client requirements. I am dedicated to producing efficient and dependable software, collaborating seamlessly with fellow developers, designers, and stakeholders to achieve project objectives.
+            Hello there! I am Ibtasham Ali, a skilled software developer specializing in Node.js, React, MongoDB, NestJS, and a touch of Vue, along with proficiency in SQL. My expertise lies in crafting intuitive and scalable web applications tailored to diverse client requirements. I am dedicated to producing efficient and dependable software, collaborating seamlessly with fellow developers, designers, and stakeholders to achieve project objectives.
             </p>
             <p>
             Beyond my professional endeavors, I find joy in exploring new destinations, often opting for adventurous travel. Whether embarking on solo journeys or group escapades, I relish the exhilarating sense of freedom and discovery that accompanies each trip. Additionally, I nurture a fondness for hiking, leveraging it as a means to reconnect with nature and test my physical and mental limits. These pursuits serve as my source of rejuvenation and contribute to my innovative outlook in the realm of software development.
             </p>
             <p>
-            Emphasizing collaboration and inclusivity, I strongly believe in the power of collective efforts and diverse perspectives in achieving exceptional results. I remain committed to staying abreast of the latest technological advancements in the software domain, ensuring top-notch deliverables for my clients and maintaining a competitive edge in the industry. Whether I'm delving into coding challenges or exploring the great outdoors, my approach is driven by an unwavering spirit of curiosity, dedication, and enthusiasm.
+            Emphasizing collaboration and inclusivity, I strongly believe in the power of collective efforts and diverse perspectives in achieving exceptional results. I remain committed to staying abreast of the latest technological advancements in the software domain, ensuring top-notch deliverables for my clients and maintaining a competitive edge in the industry. Whether I am delving into coding challenges or exploring the great outdoors, my approach is driven by an unwavering spirit of curiosity, dedication, and enthusiasm.
             </p>
           </div>
         </div>
