@@ -4,8 +4,6 @@ import AboutImage from '@/images/portrait.jpg'
 
 import '@/styles/tailwind.css'
 
-export const runtime = 'edge';
-
 export const metadata = {
   title: {
     template: '%s - Ibtasham Ali',
