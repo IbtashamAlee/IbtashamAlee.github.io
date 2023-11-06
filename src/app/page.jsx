@@ -23,7 +23,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-
+export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 
 function MailIcon(props) {
   return (
