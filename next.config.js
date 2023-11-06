@@ -3,9 +3,13 @@ const withMDX = require('@next/mdx')({
 });
 
 const nextConfig = {
-  experimental: {
-    runtime: 'experimental-edge',
-  },
+  runtime: 'edge', // for Edge API Routes only
+  unstable_allowDynamic: [
+    // allows a single file
+    '/lib/utilities.js',
+    // use a glob to allow anything in the function-bind 3rd party module
+    '/node_modules/function-bind/**',
+  ],
   reactStrictMode: true,
   swcMinify: true,
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
