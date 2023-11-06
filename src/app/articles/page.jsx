@@ -1,6 +1,6 @@
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-// import { getAllArticles } from '@/lib/articles'
+import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
 
@@ -40,7 +40,7 @@ export const metadata = {
 }
 
 export default async function ArticlesIndex() {
-  // let articles = await getAllArticles()
+  let articles = await getAllArticles()
 
   return (
     <SimpleLayout
@@ -49,9 +49,9 @@ export default async function ArticlesIndex() {
     >
       <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
         <div className="flex max-w-3xl flex-col space-y-16">
-          {/* {articles.map((article) => (
+          {articles.map((article) => (
             <Article key={article.slug} article={article} />
-          ))} */}
+          ))}
         </div>
       </div>
     </SimpleLayout>
