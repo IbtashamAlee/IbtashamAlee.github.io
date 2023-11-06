@@ -60,6 +60,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="4_DOhazTzAhZmZFquldvSWCWXgJneP85baMO4hYVhTU" />
         <link rel="shortcut icon" href="https://firebasestorage.googleapis.com/v0/b/better-cui.appspot.com/o/IMG_0713-%20squaredx64.jpg?alt=media&token=7a371124-097b-4267-9862-ffea17f78c34&_gl=1*liqejs*_ga*MTgxMTg0NzMzMC4xNjk5Mjg1ODI3*_ga_CW55HF8NVT*MTY5OTI4ODAyOC4yLjEuMTY5OTI4ODA2MC4yOC4wLjA." />
       </head>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
