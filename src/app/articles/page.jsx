@@ -3,7 +3,6 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-export const runtime = 'edge' // 'nodejs' (default) | 'edge'
 
 function Article({ article }) {
   return (

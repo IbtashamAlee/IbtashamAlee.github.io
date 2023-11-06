@@ -11,10 +11,13 @@ import {
   LinkedInIcon,
   TwitterIcon,
 } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+// import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoThirtyNorth from '@/images/logos/thirty-north.png'
+// import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoGSoft from '@/images/logos/global-soft.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoObjex from '@/images/logos/objex.png'
+import logoEmerssive from '@/images/logos/emerssive.png'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
@@ -23,7 +26,7 @@ import image5 from '@/images/photos/image-5.jpg'
 import { getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-export const runtime = 'edge' // 'nodejs' (default) | 'edge'
+
 
 function MailIcon(props) {
   return (
@@ -148,7 +151,7 @@ function Role({ role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image src={role.logo} alt="" className="h-7 w-7 bg-white rounded-full p-1" unoptimized />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -178,7 +181,7 @@ function Resume() {
     {
       company: 'Global Software Consulting',
       title: 'Backend Developer',
-      logo: logoPlanetaria,
+      logo: logoGSoft,
       start: 'Jun 2023',
       end: {
         label: 'Present',
@@ -187,32 +190,32 @@ function Resume() {
     },
     {
       company: 'ThirtyNorth.dev',
-      title: 'Full stack Enginner',
-      logo: logoFacebook,
+      title: 'Full stack Engineer',
+      logo: logoThirtyNorth,
       start: 'Jul 2022',
       end: 'May 2023',
     },
     {
       company: 'Emerssive Solutions',
       title: 'Associate Software Engr',
-      logo: logoStarbucks,
+      logo: logoEmerssive,
       start: 'Aug 2021',
       end: 'Feb 2022',
     },
     {
       company: 'Objex',
       title: 'Frontend Engineer',
-      logo: logoStarbucks,
+      logo: logoObjex,
       start: 'Jan 2021',
       end: 'Apr 2021',
     },
-    {
-      company: 'BigITSystems',
-      title: 'VueJS Engineer',
-      logo: logoStarbucks,
-      start: 'Sep 2020',
-      end: 'Nov 2020',
-    },
+    // {
+    //   company: 'BigITSystems',
+    //   title: 'VueJS Engineer',
+    //   logo: "logoStarbucks",
+    //   start: 'Sep 2020',
+    //   end: 'Nov 2020',
+    // },
   ]
 
   return (
