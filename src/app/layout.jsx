@@ -18,7 +18,7 @@ export const metadata = {
     'I am Ibtasham Ali, a Software Engineer specializing in JavaScript, particularly with an emphasis on Node.js. With a wealth of experience in developing exceptional software solutions, I bring a robust skill set to every project. Apart from my enthusiasm for technology, I am dedicated to regular gym sessions, prioritizing the maintenance of a strong and healthy physique.',
     images: [
       {
-        url: AboutImage,
+        url: "AboutImage",
         alt: 'Ibtasham Ali - Software Engineer',
       },
     ],
