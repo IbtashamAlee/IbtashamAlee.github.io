@@ -1,12 +1,23 @@
 // next.config.js
 module.exports = {
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
-    // Add the configuration for handling the 'fs' module
-    if (!isServer) {
-      config.node = {
-        fs: 'empty'
-      };
-    }
+  webpack: (
+    config,
+    { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
+  ) => {
+    config.externals.push({
+      "fs": "fs"
+    })
+    config.module.rules.push({
+      test: /\.mdx?$/,
+      use: [
+        defaultLoaders.babel,
+        {
+          loader: '@mdx-js/loader',
+        },
+      ],
+    });
+
     return config;
   },
+  
 };
