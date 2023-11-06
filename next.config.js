@@ -5,7 +5,10 @@ module.exports = {
     { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack },
   ) => {
     config.externals.push({
-      "fs": "fs"
+      "fs": "fs",
+      "os": "os",
+      "streams": "streams",
+      "path": "path"
     })
     config.module.rules.push({
       test: /\.mdx?$/,
