@@ -8,6 +8,7 @@ module.exports = {
       "fs": "fs",
       "os": "os",
       "streams": "streams",
+      "stream": "stream",
       "path": "path"
     })
     config.module.rules.push({
