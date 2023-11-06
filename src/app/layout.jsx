@@ -17,7 +17,7 @@ export const metadata = {
     title: "Ibtasham Ali - Passionate Software Engineer, Tech Enthusiast, and Fitness Advocate",
     description:
     'I am Ibtasham Ali, a Software Engineer specializing in JavaScript, particularly with an emphasis on Node.js. With a wealth of experience in developing exceptional software solutions, I bring a robust skill set to every project. Apart from my enthusiasm for technology, I am dedicated to regular gym sessions, prioritizing the maintenance of a strong and healthy physique.',
-    images: "https://firebasestorage.googleapis.com/v0/b/better-cui.appspot.com/o/IMG_0713-%20squared.jpg?alt=media&token=0091bd53-9288-4f9b-b0d2-bb9b56df8023&_gl=1*uw1azc*_ga*MTgxMTg0NzMzMC4xNjk5Mjg1ODI3*_ga_CW55HF8NVT*MTY5OTI4ODAyOC4yLjEuMTY5OTI4ODA4OC42MC4wLjA.",
+    images: "https://firebasestorage.googleapis.com/v0/b/better-cui.appspot.com/o/IMG_0713-%20squared-compressed.jpg?alt=media&token=92bb5928-b211-40a2-88a4-25db8adca895&_gl=1*ez5fkw*_ga*MTgxMTg0NzMzMC4xNjk5Mjg1ODI3*_ga_CW55HF8NVT*MTY5OTI5OTc2OS40LjEuMTY5OTI5OTc4NS40NC4wLjA.",
     url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
   },
   icons: {
