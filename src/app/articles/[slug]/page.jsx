@@ -1,16 +1,15 @@
 import fs from 'fs'
 import { MDXRemote } from 'next-mdx-remote/rsc'
 import { ArticleLayout } from '@/components/ArticleLayout'
-import path from 'path'
+
+const ARTICLES_DIR = [__filename.split('.next')[0], 'content/articles'].join('/');
 
 export async function generateStaticParams() {
-  const articles = fs.readdirSync('content/articles');
+  const articles = fs.readdirSync(ARTICLES_DIR);
   return articles.filter((f) => f.endsWith('.mdx')).map((f) => ({slug: f.replace(/\.mdx$/i, '')}));
 }
 
 export const runtime = 'edge'
-
-const ARTICLES_DIR = path.join(__filename.split('.next')[0], 'content/articles');
 
 const article = {
   author: 'Adam Wathan',
@@ -21,7 +20,7 @@ const article = {
 }
 
 export default function Article({ params }) {
-  const file = fs.readFileSync(path.join(ARTICLES_DIR, `${params.slug}.mdx`));
+  const file = fs.readFileSync([ARTICLES_DIR, `${params.slug}.mdx`].join('/'));
 
   return (
     <ArticleLayout article={article}>
