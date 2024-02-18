@@ -8,6 +8,8 @@ export async function generateStaticParams() {
   return articles.filter((f) => f.endsWith('.mdx')).map((f) => ({slug: f.replace(/\.mdx$/i, '')}));
 }
 
+export const runtime = 'edge'
+
 const ARTICLES_DIR = path.join(__filename.split('.next')[0], 'content/articles');
 
 const article = {
